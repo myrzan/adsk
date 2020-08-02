@@ -11,6 +11,22 @@
         <link rel="stylesheet" href="{{ asset('css/app.css?v=' . microtime()) }}">
     </head>
     <body>
+        <div class="sidebar collapsed">
+            <div id="sidebar_toggler">
+                <span>МЕНЮ</span>
+            </div>
+            <div class="clearfix"></div>
+            <div class="logo"></div>
+            <ul class="sidebar-list">
+                <li class="sidebar-item"><a href="#" class="sidebar-anchor">Про нас</a></li>
+                <li class="sidebar-item"><a href="#" class="sidebar-anchor">Преимущества</a></li>
+                <li class="sidebar-item"><a href="#" class="sidebar-anchor">Оборудование</a></li>
+                <li class="sidebar-item"><a href="#" class="sidebar-anchor">Каталог продукции</a></li>
+                <li class="sidebar-item"><a href="#" class="sidebar-anchor">Сертификаты</a></li>
+                <li class="sidebar-item"><a href="#" class="sidebar-anchor">Контакты</a></li>
+            </ul>
+        </div>
+
         <a href="https://api.whatsapp.com/send?phone=77273924144" target="_blank">
             <div class="whatsapp">
                 <span>+7 (727) 392 4144</span>

@@ -15,4 +15,13 @@ $(document).ready(function() {
             });
         }, 3000);
     }, 500);
+
+    function toggleSidebar() {
+        $("#sidebar_toggler").toggleClass("close");
+        $(".sidebar").toggleClass("collapsed");
+    }
+
+    $("#sidebar_toggler").on("click tap", function() {
+        toggleSidebar();
+    });
 });
