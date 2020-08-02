@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'TT Chocolates Bold';
+    src: url('../fonts/TTCHOCOLATES-BOLD.TTF') format("truetype");
+}
+
+@font-face {
+    font-family: 'TT Chocolates Light';
+    src: url('../fonts/TTCHOCOLATES-LIGHT.TTF') format("truetype");
+}
+
+@font-face {
+    font-family: 'TT Chocolates Regular';
+    src: url('../fonts/TTCHOCOLATES-REGULAR.TTF') format("truetype");
+}
+
+body {
+    background-color: #111;
+    font-family: 'TT Chocolates Regular', 'Roboto', sans-serif;
+}
+
+.whatsapp {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: #fff;
+    z-index: 10;
+    font-size: 14pt;
+    padding-right: 30px;
+    display: none;
+}
+
+.whatsapp::after {
+    display: block;
+    content: '';
+    width: 25px;
+    height: 25px;
+    background-image: url('../img/whatsapp.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: -2px;
+    top: -2px;
+}
+
+#welcome {
+    display: none;
+    background-color: #111;
+    background-image: url('../img/logo_white.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 150px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.section:nth-of-type(1) {
+    background-color: #111;
+}
+
+.section:nth-of-type(2) {
+    background-color: mediumpurple;
+}
+
