@@ -24,10 +24,10 @@ body {
     top: 20px;
     color: #111;
     z-index: 10;
-    font-size: 14pt;
-    font-weight: bold;
+    font-size: 17pt;
+    font-family: 'TT Chocolates Bold', 'Roboto', sans-serif;
     padding-right: 30px;
-    text-shadow: 0 1px 0px #fff;
+    text-shadow: 0 1px 3px #fff;
 }
 
 .whatsapp:hover {
@@ -84,7 +84,7 @@ body {
     position: absolute;
     left: 0;
     background-color: #080808;
-    z-index: 10;
+    z-index: 11;
     width: 250px;
     padding: 20px;
     height: 100%;
@@ -145,21 +145,21 @@ body {
     transition: all .4s ease;
 }
 
-#sidebar_toggler {
+#sidebar_toggler, #sidebar_toggler_mobile {
     width: 50px;
     float: right;
     height: 50px;
     text-align: center;
-    background-image: url('../img/open-menu.png');
+    background-image: url('../img/menu.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 50%;
+    background-size: cover;
     border: 1px solid #fff;
     position: relative;
     cursor: pointer;
 }
 
-#sidebar_toggler span {
+#sidebar_toggler span, #sidebar_toggler_mobile span {
     color: #fff;
     position: absolute;
     bottom: -25px;
@@ -170,6 +170,7 @@ body {
 
 #sidebar_toggler.close {
     background-image: url('../img/close.png');
+    background-size: 50%;
     width: 50px;
     position: relative;
     right: 0;
@@ -195,10 +196,10 @@ body {
     width: 100px;
     height: 91px;
     margin: 15px auto;
-    -webkit-transition: all .6s ease;
-    -moz-transition: all .6s ease;
-    -o-transition: all .6s ease;
-    transition: all .6s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
 }
 .collapsed .logo {
     width: 0;
@@ -223,6 +224,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100%!important;
 }
 
 .section-2 {
@@ -230,6 +232,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100%!important;
 }
 
 .llp-text {
@@ -244,25 +247,17 @@ section .h2, section p {
 }
 
 section .h2 {
+    display: inline-block;
     font-size: 30pt;
     text-transform: uppercase;
+    color: #fff;
+    font-family: 'TT Chocolates Bold', 'Roboto', sans-serif;
+    position: relative;
     margin-bottom: 30px;
 }
 
 section .h2 > span {
     font-weight: bold;
-}
-
-.side-logo {
-    position: absolute;
-    bottom: 70px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    color: #fff;
-    font-size: 28pt;
-    letter-spacing: 5pt;
-    transform: rotateZ(-90deg);
 }
 
 .figure {
@@ -274,6 +269,7 @@ section .h2 > span {
 section {
     color: #fff;
     font-size: 10pt;
+    height: 100%;
 }
 
 section ul {
@@ -285,6 +281,10 @@ section ul {
     margin: 40px 0;
 }
 
+.section-4 .col-md-7 {
+    padding-right: 100px;
+}
+
 @media (min-width: 768px) {
     section, .llp-text {
         font-size: 14pt!important;
@@ -292,8 +292,364 @@ section ul {
     .about-text {
         padding-right: 0;
     }
+
+    .section-9 .container, .section-10 .container,
+    .section-11 .container, .section-12 .container {
+        display: flex;
+    }
+
+    #certificates {
+        margin-top: 100px;
+    }
 }
 
 .about-text {
     padding-right: 100px;
+}
+
+.gallery-item {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.gallery-img {
+    height: 150px;
+    border: 1px solid #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#certificates .gallery-img {
+    background-color: rgba(256, 256, 256, .1);
+    background-size: 60%;
+}
+
+.section-5 .h2::after {
+    border: 2px solid #fff;
+    width: 3px;
+    height: 100%;
+    display: block;
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 0;
+}
+
+.slick-dots {
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+}
+
+.slick-dots li:first-of-type:before, .slick-dots li:last-of-type:after {
+    width: 30px;
+    border: 1px solid #fff;
+    height: 1px;
+    display: block;
+    content: '';
+    position: absolute;
+    left: -50px;
+    top: 12px;
+}
+
+.slick-dots li:last-of-type:after {
+    left: initial;
+    right: -50px;
+}
+
+.slick-dots button {
+    background: none;
+    color: #fff;
+    border: none;
+    margin: 0 10px;
+    width: 40px;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    section:after, section .container-fluid:after, section .container:after {
+        display: none!important;
+    }
+
+    .whatsapp {
+        color: #fff;
+        text-shadow: 0 1px 2px #000;
+    }
+
+    .sidebar.collapsed {
+        width: 0;
+        padding-left: 0!important;
+        padding-right: 0!important;
+    }
+
+    .llp-text {
+        width: 100%;
+    }
+
+    section .h2 {
+        text-align: center;
+        font-size: 21pt;
+        display: block;
+    }
+
+    .about-text {
+        padding-right: 0;
+        font-size: 12pt;
+    }
+
+    section {
+        height: initial!important;
+    }
+
+    .section-1, .section-2, .section-3 {
+        height: 100%;
+    }
+
+    .section-5 {
+        margin-bottom: 50px;
+    }
+
+    .section-production .h1 {
+        font-size: 18pt!important;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .section-production h5 {
+        font-size: 22pt!important;
+        text-align: center;
+    }
+
+    .col-md-1 {
+        display: none;
+    }
+
+    .section-4 .figure {
+        width: 100%;
+    }
+
+    .section-4 {
+        font-size: 12pt;
+    }
+
+    .slick-arrow {
+        position: absolute;
+        bottom: -50px;
+        background-color: transparent;
+        color: #fff;
+        padding: 10px 15px;
+        border: 1px solid #fff;
+    }
+
+    .slick-prev {
+        left: 0;
+    }
+
+    .slick-next {
+        right: 0;
+    }
+
+    .gallery-item {
+        border: none!important;
+        padding: 0!important;
+    }
+
+    #sidebar_toggler_mobile {
+        display: block;
+    }
+    .sidebar {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .section-production, .section-production .container, .section-production .row {
+        height: initial;
+    }
+
+    .section-14 .container {
+        padding-top: 0;
+        height: initial;
+    }
+    body .meet {
+        border: 3px solid #fff;
+        font-size: 30pt;
+        height: initial;
+    }
+    body .meet span {
+        text-align: center;
+        position: relative;
+        right: auto;
+        left: auto;
+        display: block;
+        line-height: initial;
+        margin: 20px 0;
+        bottom: auto;
+    }
+}
+
+#sidebar_toggler_mobile {
+    display: block!important;
+    z-index: 1;
+    background-color: #010101;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+}
+
+#sidebar_toggler_mobile.hidden {
+    display: none;
+}
+
+.section-production img {
+    width: 95%;
+}
+
+.section-production .h1 {
+    font-size: 40pt;
+    font-family: 'TT Chocolates Bold', 'Roboto', sans-serif;
+    text-transform: uppercase;
+}
+
+.section-production h5 {
+    text-transform: uppercase;
+    font-size: 12pt;
+    margin: 20px 0;
+    font-family: 'TT Chocolates Bold', 'Roboto', sans-serif;
+}
+
+.section-production p {
+    font-size: 12pt;
+    font-family: 'TT Chocolates Light', 'Roboto', sans-serif;
+    margin: 10px 0 30px;
+}
+
+.section-production, .section-production .container, .section-production .row {
+    height: 100%;
+}
+
+@media (max-width: 1170px) {
+    section, .llp-text {
+        font-size: 11pt!important;
+    }
+}
+
+.meet {
+    border: 6px solid #fff;
+    font-size: 35pt;
+    font-family: 'TT Chocolates Bold', 'Roboto', sans-serif;
+    text-transform: uppercase;
+    height: 180px;
+    position: relative;
+}
+
+.meet span {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    line-height: 30pt;
+}
+
+.contacts {
+    font-size: 16pt;
+}
+
+.contacts-action {
+    font-size: 18pt;
+    text-transform: uppercase;
+    font-family: 'TT Chocolates Bold', 'Roboto', sans-serif;
+    text-align: right;
+}
+
+.contacts-action span {
+    display: block;
+    position: relative;
+}
+
+.contacts-action span:before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    content: "";
+    display: block;
+    width: 30%;
+    border: 1px solid #ccc;
+    height: 1px;
+}
+
+.contacts a, .contacts a:hover, .contacts a:active {
+    color: #fff;
+    text-decoration: none;
+}
+
+section:after {
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100px;
+    width: 1px;
+    background-color: #fff;
+}
+
+.section-1:after, .section-2:after {
+    content: none;
+}
+
+section .container-fluid:after, section .container:after {
+    content: 'АДСК';
+    display: block;
+    position: absolute;
+    bottom: 70px;
+    right: -10px;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 28pt;
+    letter-spacing: 5pt;
+    transform: rotateZ(-90deg);
+}
+
+section:last-of-type:after {
+    width: 15px;
+    right: 93px;
+    height: 60%;
+    border: none;
+    background-color: transparent;
+    background-image: url('../img/line_dot.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#viewer {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 50px;
+    bottom: 0;
+    width: 80%;
+    height: 80%;
+    background-color: #fff;
+    padding: 20px;
+    margin: 0 auto;
+    z-index: 100;
+}
+
+#dark_bg {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 99;
 }
