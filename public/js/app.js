@@ -1,9 +1,17 @@
 $(document).ready(function() {
     let env = 'prod';
 
-    setTimeout(function() {
-        $('#welcome').fadeOut(env === 'dev' ? 1 : 300);
-    }, env === 'dev' ? 1 : 3000);
+    if ($(window).scrollTop() === 0) {
+        setTimeout(function() {
+            $('#welcome').fadeOut(env === 'dev' ? 1 : 300);
+            $("body").css("overflow-y", "auto");
+            $('.sidebar').removeClass('translated');
+        }, env === 'dev' ? 1 : 3000);
+    } else {
+        $('#welcome').hide();
+        $("body").css("overflow-y", "auto");
+        $('.sidebar').removeClass('translated');
+    }
 
     // $('.main').onepage_scroll({
     //     sectionContainer: 'section',
@@ -86,8 +94,9 @@ $(document).ready(function() {
         slidesToShow: 3,
         slidesToScroll: 3,
         infinite: true,
-        arrows: false,
         dots: true,
+        prevArrow: '<button type="button" class="slick-prev slick-arrow">←</button>',
+        nextArrow: '<button type="button" class="slick-next slick-arrow">→</button>',
         responsive: [
             {
                 breakpoint: 1024,
@@ -153,9 +162,10 @@ $(document).ready(function() {
         image.style.width = "100%";
         image.onload = function () {
             $('#viewer').empty().append(image);
+            $('#viewer').append("<div id='close_viewer'>×</div>");
         };
         image.onerror = function () {
-            $('#viewer').empty().html('That image is not available.');
+            $('#viewer').empty().html("<div id='close_viewer'>×</div>" + 'That image is not available.');
         }
 
 
@@ -173,6 +183,10 @@ $(document).ready(function() {
     });
 
     $("#dark_bg").on("click", function () {
+        $("#viewer, #dark_bg").hide();
+    });
+
+    $("body").on("click", "#close_viewer", function () {
         $("#viewer, #dark_bg").hide();
     });
 
@@ -199,5 +213,14 @@ $(document).ready(function() {
         speed: 1000,
         arrows: false,
         pauseOnHover: false,
+    });
+
+    $("#production_slider").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        speed: 1000,
+        arrows: false,
+        autoplaySpeed: 3000,
+        autoplay: true,
     });
 });

@@ -14,7 +14,7 @@
     </head>
     <body>
         <div id="sidebar_toggler_mobile"></div>
-        <div class="sidebar collapsed">
+        <div class="sidebar collapsed translated">
             <div id="sidebar_toggler">
                 <span>МЕНЮ</span>
             </div>
@@ -158,12 +158,6 @@
                             <div class="gallery-item">
                                 <div class="gallery-img" style="background-image:url({{ asset('/img/gallery/6.jpg') }})"></div>
                             </div>
-                            <div class="gallery-item">
-                                <div class="gallery-img" style="background-image:url({{ asset('/img/gallery/7.jpg') }})"></div>
-                            </div>
-                            <div class="gallery-item">
-                                <div class="gallery-img" style="background-image:url({{ asset('/img/gallery/8.jpg') }})"></div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -171,162 +165,20 @@
             <hr class="border-top">
             <section class="section-6 section-production" id="production">
                 <div class="container pt-5">
-                    <div class="row align-items-center">
-                        <div class="col-md-5 mb-3">
-                            <img src="{{ asset('/img/production/1.jpg') }}" alt="Наша продукция">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div id="production_slider">
+                                @for($i = 1; $i < 10; $i++)
+                                <div class="gallery-item">
+                                    <div class="gallery-img" style="background-image:url({{ asset('/img/production/' . $i . '.jpg') }})"></div>
+                                </div>
+                                @endfor
+                            </div>
                         </div>
-                        <div class="col-md-7">
+                        <div class="col-md-6">
                             <div class="h1">Наша продукция</div>
-                            <h5>Тротуарная плита «Новый город»</h5>
-                            <p>Плитка «Новый город», как и другие серии тротуарной плитки нашего производства,
-                                отличается высокими эксплуатационными свойствами - износостойкостью,
-                                морозостойкостью, стойкостью к химическим воздействия и низким водопоглощением</p>
-                            <p>Размеры элементов: 160х160х80 / 200х160х80 / 240х160х80 мм.</p>
-                            <p>Мы производим широкий ассортимент тротуарной плитки (брусчатки) «Новый город»:
-                                классические цвета - серый, красный, коричневый, желтый, бордовый, синий, черный.</p>
-                            <p>При условии правильного ухода за тротуарной плиткой срок службы увеличивается
-                                в несколько раз. Служба качества предоставит все необходимые рекомендации
-                                и ответит на вопросы по уходу за мощением.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section-7 section-production">
-                <div class="container pt-5">
-                    <div class="row align-items-center">
-                        <div class="col-md-5 mb-3">
-                            <img src="{{ asset('/img/production/2.png') }}" alt="Тротуарная плита «БРУСЧАТКА»">
-                        </div>
-                        <div class="col-md-7">
-                            <div class="h1">Наша продукция</div>
-                            <h5>Тротуарная плита «БРУСЧАТКА»</h5>
-                            <p>Мы производим широкий ассортимент высококачественной тротуарной брусчатки
-                                для мощения дорожек, тротуаров, пешеходных зон и т.д. Продукция производится
-                                на современном немецком оборудовании методом двухслойного вибропрессования
-                                из бетона</p>
-                            <p>Размеры элементов: 200х100х60, 200х100х8.
-                                Мы производим широкий ассортимент тротуарной плитки (брусчатки):
-                                классические цвета - серый, красный, коричневый, желтый, бордовый, синий, черный.
-                                «Брусчатка» имеет правильные прямоугольные формы (ее еще называют «кирпичик»)
-                                и является универсальным решением для мощения, с одинаковым успехом используемым
-                                для благоустройства городских или частных объектов</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section-7 section-production">
-                <div class="container pt-5">
-                    <div class="row align-items-center">
-                        <div class="col-md-5">
-                            <img src="{{ asset('/img/production/3.png') }}" alt="Тротуарная плитка КВАДРАТ">
-                        </div>
-                        <div class="col-md-7">
-                            <div class="h1">Наша продукция</div>
-                            <h5>Тротуарная плита «КВАДРАТ» («Прямоугольник»)</h5>
-                            <p>Плитка «Квадрат» ( «Прямоугольник») оптимальное решение для мощения таких
-                                объектов, как стоянки легкового транспорта, пешеходные зоны, парковые дорожки и т.п.
-                                Небольшие размеры и закругленные края каждого отдельного элемента создают
-                                возможность отхода от строгой геометрии и позволяют создавать в процессе
-                                мощения плавные изгибы требуемого радиуса.
-                            </p>
-                            <p>Размеры элементов: 200х200х60 200х200х80 600х300х80 мм.</p>
-                            <p>Мы производим широкий ассортимент тротуарной плитки: классические
-                                цвета - серый, красный, коричневый, желтый, бордовый, синий, черный.</p>
-                            <p>При условии правильного ухода за тротуарной плиткой срок службы увеличивается
-                                в несколько раз. Служба качества предоставит все необходимые рекомендации
-                                и ответит на вопросы по уходу за мощением.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section-8 section-production">
-                <div class="container pt-5">
-                    <div class="row align-items-center">
-                        <div class="col-md-5">
-                            <img src="{{ asset('/img/production/4.png') }}" alt="БОРДЮР «МАГИСТРАЛЬНЫЙ»">
-                        </div>
-                        <div class="col-md-7">
-                            <div class="h1">Наша продукция</div>
-                            <h5>БОРДЮР «МАГИСТРАЛЬНЫЙ»</h5>
-                            <p>Бордюр «Магистральный» используется в современном дорожном строительстве.
-                                Он выполняет роль разделительной линии между проезжей частью и пешеходной зоной,
-                                продлевает срок эксплуатации дорожного полотна, защищая дорогу от разрушения.</p>
-                            <p>Размер: 1000х300х180 мм.</p>
-                            <p>Высококачественный магистральный бордюр шириной 180мм, отличается высокими
-                                эксплуатационными характеристиками.</p>
-                            <p>Этот высококачественный магистральный бордюр отличается высокими
-                                эксплуатационными характеристиками и оптимальной ценой.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section-9 section-production">
-                <div class="container pt-5">
-                    <div class="row my-auto" style="height:initial">
-                        <div class="col-md-5">
-                            <img src="{{ asset('/img/production/5.png') }}" alt="БОРДЮР «ДОРОЖНЫЙ»">
-                        </div>
-                        <div class="col-md-7">
-                            <div class="h1">Наша продукция</div>
-                            <h5>БОРДЮР «ДОРОЖНЫЙ»</h5>
-                            <p>Бордюр «Дорожный» производится из высококачественного
-                                вибропрессованного бетона.</p>
-                            <p>Размер: 1000х300х150 мм</p>
-                            <p>Предназначен для разделения автомобильных дорог от пешеходных зон.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section-10 section-production">
-                <div class="container pt-5">
-                    <div class="row my-auto" style="height:initial">
-                        <div class="col-md-5">
-                            <img src="{{ asset('/img/production/6.png') }}" alt="БОРДЮР «САДОВЫЙ»">
-                        </div>
-                        <div class="col-md-7">
-                            <div class="h1">Наша продукция</div>
-                            <h5>БОРДЮР «САДОВЫЙ»</h5>
-                            <p>Бордюр «Садовый» или «Тротуарный» - широко используется при благоустройстве
-                                тротуаров, парковых зон, загородных участков и других подобных объектов.</p>
-                            <p>Размер: 1000х200х80 мм</p>
-                            <p>Бордюр «Садовый» - стандартный материал для оформления клумб
-                                и пешеходных дорожек.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section-11 section-production">
-                <div class="container pt-5">
-                    <div class="row my-auto" style="height:initial">
-                        <div class="col-md-5">
-                            <img src="{{ asset('/img/production/7.png') }}" alt="БЛОК «СТЕНОВОЙ» ПУСТОТЕЛЫЙ">
-                        </div>
-                        <div class="col-md-7">
-                            <div class="h1">Наша продукция</div>
-                            <h5>БЛОК «СТЕНОВОЙ» ПУСТОТЕЛЫЙ</h5>
-                            <p>Блок «Стеновой» Пустотелый - отличается оптимальными габаритными размерами
-                                и точной геометрией, что позволяет обеспечивать высокую скорость строительных
-                                работ и экономию кладочного раствора за счет минимизации высоты монтажного шва.</p>
-                            <p>Размер: 390х190х190 мм.</p>
-                            <p>Предназначен для кладки наружных стен при возведении зданий различного назначения.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section-12 section-production">
-                <div class="container pt-5">
-                    <div class="row my-auto" style="height:initial">
-                        <div class="col-md-5">
-                            <img src="{{ asset('/img/production/8.png') }}" alt="БЛОК «СТЕНОВОЙ СПЛИТЕРНЫЙ»">
-                        </div>
-                        <div class="col-md-7">
-                            <div class="h1">Наша продукция</div>
-                            <h5>БЛОК «СТЕНОВОЙ СПЛИТЕРНЫЙ»</h5>
-                            <p>Блок «Стеновой сплитерный» используются в малоэтажном строительстве - для
-                                возведения наружных стен, а также для возведения межквартирных перегородок
-                                в многоквартирных домах и промышленных зданиях.</p>
-                            <p>Размер: 390х190х190 мм</p>
+                            <p style="font-size:14pt;">Современный завод по производству вибропрессованных бетонных изделий по европейской технологии позволяет производить широкий ассортимент тротуарной плитки и бордюров.</p>
+                            <a href="" class="pdf-button mt-5" download>Скачать продукцию в PDF ⤓</a>
                         </div>
                     </div>
                 </div>
@@ -345,15 +197,19 @@
                         <div class="gallery" id="certificates">
                             <div class="gallery-item">
                                 <div class="gallery-img" style="background-image:url({{ asset('/img/certificates/1.png') }})"></div>
+                                <div class="certificate-title">Смеси асфальтобетонные</div>
                             </div>
                             <div class="gallery-item">
                                 <div class="gallery-img" style="background-image:url({{ asset('/img/certificates/2.png') }})"></div>
+                                <div class="certificate-title">Смеси асфальтобетонные горячие</div>
                             </div>
                             <div class="gallery-item">
                                 <div class="gallery-img" style="background-image:url({{ asset('/img/certificates/3.png') }})"></div>
+                                <div class="certificate-title">Смеси асфальтобетонные горячие ЩМАС-20</div>
                             </div>
                             <div class="gallery-item">
                                 <div class="gallery-img" style="background-image:url({{ asset('/img/certificates/4.png') }})"></div>
+                                <div class="certificate-title">Эмульсия битумная катионная ЭБК-2</div>
                             </div>
                         </div>
                     </div>
@@ -381,11 +237,12 @@
                         </div>
                     </div>
                 </div>
-                <hr class="border-top">
-                <footer class="pt-3 pb-4 text-md-right">
+            </section>
+            <div class="container">
+                <footer class="pt-3 pb-4 text-center">
                     Разработка сайта <a href="https://red1group.kz">Red1Group</a>.
                 </footer>
-            </section>
+            </div>
         </div>
         <div id="dark_bg"></div>
         <div id="viewer"></div>
