@@ -5,26 +5,26 @@ $(document).ready(function() {
         $('#welcome').fadeOut(env === 'dev' ? 1 : 300);
     }, env === 'dev' ? 1 : 3000);
 
-    $('.main').onepage_scroll({
-        sectionContainer: 'section',
-        easing: 'ease',
-        animationTime: env === 'dev' ? 1 : 700,
-        pagination: true,
-        updateURL: false,
-        loop: false,
-        keyboard: true,
-        direction: 'vertical',
-        afterMove: function (index) {
-            if (index > 2) {
-                $(".whatsapp").hide()
-            } else {
-                $(".whatsapp").show()
-            }
-        },
-        responsiveFallback: function(){
-            return $(window).outerWidth() < 768
-        },
-    });
+    // $('.main').onepage_scroll({
+    //     sectionContainer: 'section',
+    //     easing: 'ease',
+    //     animationTime: env === 'dev' ? 1 : 700,
+    //     pagination: true,
+    //     updateURL: false,
+    //     loop: false,
+    //     keyboard: true,
+    //     direction: 'vertical',
+    //     afterMove: function (index) {
+    //         if (index > 2) {
+    //             $(".whatsapp").hide()
+    //         } else {
+    //             $(".whatsapp").show()
+    //         }
+    //     },
+    //     responsiveFallback: function(){
+    //         return $(window).outerWidth() < 768
+    //     },
+    // });
 
     function toggleSidebar() {
         $("#sidebar_toggler").toggleClass("close");
@@ -189,5 +189,15 @@ $(document).ready(function() {
         }, 1000);
         e.preventDefault();
         return false;
+    });
+
+    $('.lightbox').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        speed: 1000,
+        arrows: false,
+        pauseOnHover: false,
     });
 });
