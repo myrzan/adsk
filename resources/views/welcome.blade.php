@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link rel="stylesheet" href="{{ asset('css/slick-fullscreen.css') }}">
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-        <link rel="stylesheet" href="{{ asset('css/app.css?v=' . microtime()) }}">
+        <link rel="stylesheet" href="{{ asset('css/app.css?v=2.0') }}">
     </head>
     <body>
         <div id="sidebar_toggler_mobile"></div>
@@ -250,5 +250,5 @@
     <script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
     <script src="{{ asset('js/slick-fullscreen.js') }}"></script>
     <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.js"></script>
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/app.js?v=2.0') }}"></script>
 </html>
