@@ -2,6 +2,7 @@ $(document).ready(function() {
     let env = 'prod';
 
     if ($(window).scrollTop() === 0) {
+        $('.lightbox').addClass('with-big-logo');
         setTimeout(function() {
             $('#welcome').fadeOut(env === 'dev' ? 1 : 300);
             $("body").css("overflow-y", "auto");

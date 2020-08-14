@@ -178,7 +178,7 @@
                         <div class="col-md-6">
                             <div class="h1">Наша продукция</div>
                             <p style="font-size:14pt;">Современный завод по производству вибропрессованных бетонных изделий по европейской технологии позволяет производить широкий ассортимент тротуарной плитки и бордюров.</p>
-                            <a href="" class="pdf-button mt-5" download>Скачать продукцию в PDF ⤓</a>
+                            <a href="{{ asset('/ADSK trade.pdf') }}" class="pdf-button mt-5" download>Скачать продукцию в PDF ⤓</a>
                         </div>
                     </div>
                 </div>
@@ -240,7 +240,7 @@
             </section>
             <div class="container">
                 <footer class="pt-3 pb-4 text-center">
-                    Разработка сайта <a href="https://red1group.kz">Red1Group</a>.
+                    Сайт разработан <a href="https://red1group.kz" target="_blank">Red1Group</a>.
                 </footer>
             </div>
         </div>
