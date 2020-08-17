@@ -8,6 +8,23 @@ class RequestController extends Controller
 {
     public function request(Request $request)
     {
+        $secretKey    = env('GOOGLE_SECRET');
+        $ip           = $_SERVER['REMOTE_ADDR'];
+        $url          = 'https://www.google.com/recaptcha/api/siteverify?secret='
+                      . urlencode($secretKey) . '&response=' . urlencode($request->get('g-recaptcha-response'));
+        $response     = file_get_contents($url);
+        $responseKeys = json_decode($response,true);
+
+        // should return JSON with success as true
+        if(!$responseKeys["success"]) {
+            $json = [
+                'status'  => 'error',
+                'message' => 'Вы забыли отметить галочку "Я не робот"',
+            ];
+
+            return response()->json($json);
+        }
+
         $name    = $request->get('name');
         $phone   = $request->get('phone');
         $to      = 'verystrange.event@gmail.com';

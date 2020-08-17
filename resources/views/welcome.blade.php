@@ -266,6 +266,7 @@
                             <div class="form-group">
                                 <input type="text" class="form form-control form-control-lg" id="phone" placeholder="Ваш номер телефона" required>
                             </div>
+                            <div class="g-recaptcha" data-sitekey="6Lf6EMAZAAAAAHMtUT8ZDIVAFteSCbighG-5leCO"></div>
                             <button class="mt-3 btn btn-success shadow-md btn-lg">Позвоните мне</button>
                         </form>
                     </div>
@@ -277,6 +278,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         <script src="{{ asset('js/slick-fullscreen.js') }}"></script>
         <script src="{{ asset('js/jquery.mask.min.js') }}"></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.js"></script>
         <script src="{{ asset('js/app.js?v=3.0') }}"></script>
     </body>
