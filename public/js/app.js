@@ -212,7 +212,7 @@ $(document).ready(function() {
         let _token = $("#form").find("input[name='_token']").val();
         let name = $("#name").val();
         let phone = $("#phone").val();
-        let recaptcha = $("#form").find("g-recaptcha-response").val();
+        let recaptcha = $("#form").find(".g-recaptcha-response").val();
         $("#form").find("button").prop('disabled', true);
         $.ajax({
             url: "/request",
