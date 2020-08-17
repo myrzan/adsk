@@ -210,6 +210,7 @@ $(document).ready(function() {
 
     $("#form").on("submit", function (e) {
         let _token = $("#form").find("input[name='_token']").val();
+        let name = $("#name").val();
         let phone = $("#phone").val();
         $("#form").find("button").prop('disabled', true);
         $.ajax({
@@ -217,6 +218,7 @@ $(document).ready(function() {
             type: "post",
             data: {
                 _token: _token,
+                name: name,
                 phone: phone,
             },
             dataType: "json",

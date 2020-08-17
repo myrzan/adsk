@@ -2,17 +2,17 @@
 namespace App\Http\Controllers;
 
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception as phpMailerException;
 use Illuminate\Http\Request;
 
 class RequestController extends Controller
 {
     public function request(Request $request)
     {
+        $name    = $request->get('name');
         $phone   = $request->get('phone');
-        $to      = 'dauletmyrzan@gmail.com';
+        $to      = 'verystrange.event@gmail.com';
         $subject = 'Обратный звонок АДСК';
-        $message = '<p>На сайте оставлена заявка на обратный звонок.</p> </br> <b>Номер: <a href="tel:'.$phone.'">'.$phone.'</a></b>';
+        $message = '<p>На сайте оставлена заявка на обратный звонок.</p> </br><p>Имя: '. $name .'</p> <b>Номер: <a href="tel:'.$phone.'">'.$phone.'</a></b>';
         $mail    = new PHPMailer(true); // notice the \  you have to use root namespace here
 
         $mail->isSMTP();

@@ -261,7 +261,10 @@
                         <form action="" id="form">
                             @csrf
                             <div class="form-group">
-                                <input type="text" class="form form-control form-control-lg" id="phone" placeholder="Ваш номер телефона">
+                                <input type="text" class="form form-control form-control-lg" id="name" placeholder="Ваше имя" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form form-control form-control-lg" id="phone" placeholder="Ваш номер телефона" required>
                             </div>
                             <button class="mt-3 btn btn-success shadow-md btn-lg">Позвоните мне</button>
                         </form>
