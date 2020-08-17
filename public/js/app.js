@@ -7,33 +7,16 @@ $(document).ready(function() {
             $('#welcome').fadeOut(env === 'dev' ? 1 : 300);
             $("body").css("overflow-y", "auto");
             $('.sidebar').removeClass('translated');
+            $('.whatsapp').fadeIn();
+            $("#formModalBtn").css({
+                zIndex: 100
+            });
         }, env === 'dev' ? 1 : 3000);
     } else {
         $('#welcome').hide();
         $("body").css("overflow-y", "auto");
         $('.sidebar').removeClass('translated');
     }
-
-    // $('.main').onepage_scroll({
-    //     sectionContainer: 'section',
-    //     easing: 'ease',
-    //     animationTime: env === 'dev' ? 1 : 700,
-    //     pagination: true,
-    //     updateURL: false,
-    //     loop: false,
-    //     keyboard: true,
-    //     direction: 'vertical',
-    //     afterMove: function (index) {
-    //         if (index > 2) {
-    //             $(".whatsapp").hide()
-    //         } else {
-    //             $(".whatsapp").show()
-    //         }
-    //     },
-    //     responsiveFallback: function(){
-    //         return $(window).outerWidth() < 768
-    //     },
-    // });
 
     function toggleSidebar() {
         $("#sidebar_toggler").toggleClass("close");
@@ -69,9 +52,8 @@ $(document).ready(function() {
                     slidesPerRow: 1,
                     slidesToShow: 2,
                     slidesToScroll: 2,
-                    arrows: true,
-                    prevArrow: '<button type="button" class="slick-prev slick-arrow">←</button>',
-                    nextArrow: '<button type="button" class="slick-next slick-arrow">→</button>',
+                    arrows: false,
+                    autoplay: true,
                     dots: false,
                 }
             },
@@ -82,9 +64,8 @@ $(document).ready(function() {
                     slidesPerRow: 1,
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    arrows: true,
-                    prevArrow: '<button type="button" class="slick-prev slick-arrow">←</button>',
-                    nextArrow: '<button type="button" class="slick-next slick-arrow">→</button>',
+                    arrows: false,
+                    autoplay: true,
                     dots: false,
                 }
             }
@@ -115,7 +96,7 @@ $(document).ready(function() {
                     slidesPerRow: 1,
                     slidesToShow: 2,
                     slidesToScroll: 2,
-                    arrows: true,
+                    arrows: false,
                     prevArrow: '<button type="button" class="slick-prev slick-arrow">←</button>',
                     nextArrow: '<button type="button" class="slick-next slick-arrow">→</button>',
                     dots: false,
@@ -128,7 +109,7 @@ $(document).ready(function() {
                     slidesPerRow: 1,
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    arrows: true,
+                    arrows: false,
                     prevArrow: '<button type="button" class="slick-prev slick-arrow">←</button>',
                     nextArrow: '<button type="button" class="slick-next slick-arrow">→</button>',
                     dots: false,
@@ -223,5 +204,30 @@ $(document).ready(function() {
         arrows: false,
         autoplaySpeed: 3000,
         autoplay: true,
+    });
+
+    $("#phone").mask('+7(000) 000-0000');
+
+    $("#form").on("submit", function (e) {
+        let _token = $("#form").find("input[name='_token']").val();
+        let phone = $("#phone").val();
+        $("#form").find("button").prop('disabled', true);
+        $.ajax({
+            url: "/request",
+            type: "post",
+            data: {
+                _token: _token,
+                phone: phone,
+            },
+            dataType: "json",
+            success (response) {
+                $(".modal-body").html(response['html']);
+            },
+            error () {
+                $("#form").find("button").prop('disabled', false);
+            }
+        });
+        e.preventDefault();
+        return false;
     });
 });

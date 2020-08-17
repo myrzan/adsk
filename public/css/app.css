@@ -29,7 +29,8 @@ body {
     right: 20px;
     top: 20px;
     color: #111;
-    z-index: 10;
+    display: none;
+    z-index: 101;
     font-size: 17pt;
     font-family: 'TT Chocolates Bold', 'Roboto', sans-serif;
     padding-right: 30px;
@@ -732,4 +733,47 @@ footer {
 .pdf-button:hover {
     background-color: #fff;
     color: #111;
+}
+
+#formModalBtn {
+    position: fixed;
+    bottom: 1px;
+    font-family: 'TT Chocolates Bold', 'Roboto', sans-serif;
+    font-size: 14pt;
+    right: 50px;
+    color: #fff;
+    padding: 10px 25px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #111;
+    border: 2px solid #fff;
+    border-bottom: none;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    #formModalBtn {
+        right: 0;
+        border-right: none;
+    }
+
+    .footer-container {
+        padding-bottom: 100px!important;
+    }
+
+    .lightbox {
+        height: auto;
+    }
+
+    .lightbox.with-big-logo:after {
+        transform: none;
+    }
+
+    #sidebar_toggler_mobile {
+        z-index: 102;
+    }
+
+    .sidebar {
+        z-index: 103;
+    }
 }

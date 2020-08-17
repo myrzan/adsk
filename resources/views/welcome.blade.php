@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link rel="stylesheet" href="{{ asset('css/slick-fullscreen.css') }}">
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-        <link rel="stylesheet" href="{{ asset('css/app.css?v=2.0') }}">
+        <link rel="stylesheet" href="{{ asset('css/app.css?v=3.0') }}">
     </head>
     <body>
         <div id="sidebar_toggler_mobile"></div>
@@ -238,7 +238,7 @@
                     </div>
                 </div>
             </section>
-            <div class="container">
+            <div class="container footer-container">
                 <footer class="pt-3 pb-4 text-center">
                     Сайт разработан <a href="https://red1group.kz" target="_blank">Red1Group</a>.
                 </footer>
@@ -246,9 +246,35 @@
         </div>
         <div id="dark_bg"></div>
         <div id="viewer"></div>
+        <div id="formModalBtn" data-toggle="modal" data-target="#formModal">Обратный звонок</div>
+        <!-- Modal -->
+        <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="formModalLabel">Оставьте свой номер телефона и мы перезвоним вам</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body p-5 text-center">
+                        <form action="" id="form">
+                            @csrf
+                            <div class="form-group">
+                                <input type="text" class="form form-control form-control-lg" id="phone" placeholder="Ваш номер телефона">
+                            </div>
+                            <button class="mt-3 btn btn-success shadow-md btn-lg">Позвоните мне</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script src="{{ asset('js/slick-fullscreen.js') }}"></script>
+        <script src="{{ asset('js/jquery.mask.min.js') }}"></script>
+        <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.js"></script>
+        <script src="{{ asset('js/app.js?v=3.0') }}"></script>
     </body>
-    <script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
-    <script src="{{ asset('js/slick-fullscreen.js') }}"></script>
-    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.js"></script>
-    <script src="{{ asset('js/app.js?v=2.0') }}"></script>
 </html>
