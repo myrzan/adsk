@@ -212,6 +212,7 @@ $(document).ready(function() {
         let _token = $("#form").find("input[name='_token']").val();
         let name = $("#name").val();
         let phone = $("#phone").val();
+        let recaptcha = $("#form").find("g-recaptcha-response").val();
         $("#form").find("button").prop('disabled', true);
         $.ajax({
             url: "/request",
@@ -220,6 +221,7 @@ $(document).ready(function() {
                 _token: _token,
                 name: name,
                 phone: phone,
+                recaptcha: recaptcha,
             },
             dataType: "json",
             success (response) {
