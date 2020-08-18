@@ -27,7 +27,7 @@ class RequestController extends Controller
 
         $name    = $request->get('name');
         $phone   = $request->get('phone');
-        $to      = 'verystrange.event@gmail.com';
+        $to      = 'otvetzvonok@adsk-trade.kz';
         $subject = 'Обратный звонок АДСК';
         $message = '<p>На сайте оставлена заявка на обратный звонок.</p> </br><p>Имя: '. $name .'</p> <b>Номер: <a href="tel:'.$phone.'">'.$phone.'</a></b>';
         $mail    = new PHPMailer(true); // notice the \  you have to use root namespace here
