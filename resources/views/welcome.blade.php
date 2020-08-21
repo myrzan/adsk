@@ -9,8 +9,8 @@
         <!-- Styles -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link rel="stylesheet" href="{{ asset('css/slick-fullscreen.css') }}">
-        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-        <link rel="stylesheet" href="{{ asset('css/app.css?v=3.0') }}">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <link rel="stylesheet" href="{{ asset('css/app.css?v=4.0') }}">
     </head>
     <body>
         <div id="sidebar_toggler_mobile"></div>
@@ -36,28 +36,28 @@
         <div id="welcome"></div>
         <div class="lightbox">
             <div>
-                <img src="{{ asset('/img/slider/1.jpg') }}" width="100%">
+                <img src="{{ asset('/img/slider/1.jpg') }}" width="100%" alt="ADSK">
             </div>
             <div>
-                <img src="{{ asset('/img/slider/2.jpg') }}" width="100%">
+                <img src="{{ asset('/img/slider/2.jpg') }}" width="100%" alt="ADSK">
             </div>
             <div>
-                <img src="{{ asset('/img/slider/3.jpg') }}" width="100%">
+                <img src="{{ asset('/img/slider/3.jpg') }}" width="100%" alt="ADSK">
             </div>
             <div>
-                <img src="{{ asset('/img/slider/4.jpg') }}" width="100%">
+                <img src="{{ asset('/img/slider/4.jpg') }}" width="100%" alt="ADSK">
             </div>
             <div>
-                <img src="{{ asset('/img/slider/5.jpg') }}" width="100%">
+                <img src="{{ asset('/img/slider/5.jpg') }}" width="100%" alt="ADSK">
             </div>
             <div>
-                <img src="{{ asset('/img/slider/6.jpg') }}" width="100%">
+                <img src="{{ asset('/img/slider/6.jpg') }}" width="100%" alt="ADSK">
             </div>
             <div>
-                <img src="{{ asset('/img/slider/7.jpg') }}" width="100%">
+                <img src="{{ asset('/img/slider/7.jpg') }}" width="100%" alt="ADSK">
             </div>
             <div>
-                <img src="{{ asset('/img/slider/8.jpg') }}" width="100%">
+                <img src="{{ asset('/img/slider/8.jpg') }}" width="100%" alt="ADSK">
             </div>
         </div>
         <div class="container-fluid main">
@@ -178,7 +178,7 @@
                         <div class="col-md-6">
                             <div class="h1">Наша продукция</div>
                             <p style="font-size:14pt;">Современный завод по производству вибропрессованных бетонных изделий по европейской технологии позволяет производить широкий ассортимент тротуарной плитки и бордюров.</p>
-                            <a href="{{ asset('/ADSK trade.pdf') }}" class="pdf-button mt-5" download>Скачать продукцию в PDF ⤓</a>
+                            <a href="{{ asset('/ASI.pdf') }}" class="pdf-button mt-5" download>Скачать продукцию в PDF ⤓</a>
                         </div>
                     </div>
                 </div>
@@ -261,9 +261,11 @@
                         <form action="" id="form">
                             @csrf
                             <div class="form-group">
+                                <label for="name">Имя:</label>
                                 <input type="text" class="form form-control form-control-lg" id="name" placeholder="Ваше имя" required>
                             </div>
                             <div class="form-group">
+                                <label for="phone">Номер телефона:</label>
                                 <input type="text" class="form form-control form-control-lg" id="phone" placeholder="Ваш номер телефона" required>
                             </div>
                             <div class="g-recaptcha" data-sitekey="6Lf6EMAZAAAAAHMtUT8ZDIVAFteSCbighG-5leCO"></div>
@@ -280,6 +282,6 @@
         <script src="{{ asset('js/jquery.mask.min.js') }}"></script>
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.js"></script>
-        <script src="{{ asset('js/app.js?v=3.0') }}"></script>
+        <script src="{{ asset('js/app.js?v=4.0') }}"></script>
     </body>
 </html>

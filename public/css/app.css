@@ -194,11 +194,11 @@ body {
 
 .logo {
     background-image: url('../img/logo_white.png');
-    background-size: 100px 91px;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     width: 100px;
-    height: 91px;
+    height: 130px;
     margin: 15px auto;
     -webkit-transition: all .5s ease;
     -moz-transition: all .5s ease;
