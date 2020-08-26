@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="ru">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <title>АДСК</title>
+        <title>Asi Construction</title>
 
         <!-- Styles -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -30,34 +30,34 @@
             </ul>
         </div>
 
-        <a href="https://api.whatsapp.com/send?phone=77273924144" target="_blank" class="whatsapp">
-            <span>+7 (727) 392 4144</span>
+        <a href="https://api.whatsapp.com/send?phone=77022946913" target="_blank" class="whatsapp">
+            <span>+7 (702) 294‒69‒13</span>
         </a>
         <div id="welcome"></div>
         <div class="lightbox">
             <div>
-                <img src="{{ asset('/img/slider/1.jpg') }}" width="100%" alt="ADSK">
+                <img src="{{ asset('/img/slider/1.jpg') }}" width="100%" alt="Asi Construction">
             </div>
             <div>
-                <img src="{{ asset('/img/slider/2.jpg') }}" width="100%" alt="ADSK">
+                <img src="{{ asset('/img/slider/2.jpg') }}" width="100%" alt="Asi Construction">
             </div>
             <div>
-                <img src="{{ asset('/img/slider/3.jpg') }}" width="100%" alt="ADSK">
+                <img src="{{ asset('/img/slider/3.jpg') }}" width="100%" alt="Asi Construction">
             </div>
             <div>
-                <img src="{{ asset('/img/slider/4.jpg') }}" width="100%" alt="ADSK">
+                <img src="{{ asset('/img/slider/4.jpg') }}" width="100%" alt="Asi Construction">
             </div>
             <div>
-                <img src="{{ asset('/img/slider/5.jpg') }}" width="100%" alt="ADSK">
+                <img src="{{ asset('/img/slider/5.jpg') }}" width="100%" alt="Asi Construction">
             </div>
             <div>
-                <img src="{{ asset('/img/slider/6.jpg') }}" width="100%" alt="ADSK">
+                <img src="{{ asset('/img/slider/6.jpg') }}" width="100%" alt="Asi Construction">
             </div>
             <div>
-                <img src="{{ asset('/img/slider/7.jpg') }}" width="100%" alt="ADSK">
+                <img src="{{ asset('/img/slider/7.jpg') }}" width="100%" alt="Asi Construction">
             </div>
             <div>
-                <img src="{{ asset('/img/slider/8.jpg') }}" width="100%" alt="ADSK">
+                <img src="{{ asset('/img/slider/8.jpg') }}" width="100%" alt="Asi Construction">
             </div>
         </div>
         <div class="container-fluid main">
@@ -223,15 +223,15 @@
                             <div class="meet mb-5">
                                 <span>Контакты</span>
                             </div>
-                            <a class="dg-widget-link" href="http://2gis.kz/almaty/firm/9429940001112310/center/76.90811634063722,43.28493780125924/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Алматы</a><div class="dg-widget-link"><a href="http://2gis.kz/almaty/center/76.908109,43.284744/zoom/16/routeTab/rsType/bus/to/76.908109,43.284744╎Алматинская дорожно-строительная компания, компания по производству асфальта?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти проезд до Алматинская дорожно-строительная компания, компания по производству асфальта</a></div><script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script><script charset="utf-8">new DGWidgetLoader({"width":"100%","height":500,"borderColor":"#a3a3a3","pos":{"lat":43.28493780125924,"lon":76.90811634063722,"zoom":16},"opt":{"city":"almaty"},"org":[{"id":"9429940001112310"}]});</script><noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>
+                            <a class="dg-widget-link" href="http://2gis.kz/almaty/firm/70000001026613374/center/76.9549584388733,43.250032316880116/zoom/17?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Алматы</a><div class="dg-widget-link"><a href="http://2gis.kz/almaty/firm/70000001026613374/photos/70000001026613374/center/76.9549584388733,43.250032316880116/zoom/17?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=photos">Фотографии компании</a></div><div class="dg-widget-link"><a href="http://2gis.kz/almaty/center/76.955229,43.250245/zoom/17/routeTab/rsType/bus/to/76.955229,43.250245╎Avenue, компания по организации и оформлению мероприятий?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти проезд до Avenue, компания по организации и оформлению мероприятий</a></div><script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script><script charset="utf-8">new DGWidgetLoader({"width":"100%","height":500,"borderColor":"#a3a3a3","pos":{"lat":43.250032316880116,"lon":76.9549584388733,"zoom":17},"opt":{"city":"almaty"},"org":[{"id":"70000001026613374"}]});</script><noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>
                         </div>
                         <div class="col-md-5 mb-5 align-self-center">
                             <div class="contacts row">
                                 <div class="col-md-6">
-                                    <p class="mt-3">Республика Казахстан, <br>город Алматы,<br> ул. Бокейханова, 55а</p>
+                                    <p class="mt-3">Республика Казахстан, <br>город Алматы,<br> ул. Кабанбай батыра, 76</p>
                                 </div>
                                 <div class="col-md-5">
-                                    <a href="tel:+77272942643" class="mt-3 d-block">+7 (727) 294‒26‒43</a>
+                                    <a href="tel:+77022946913" class="mt-3 d-block">+7 (702) 294‒69‒13</a>
                                 </div>
                             </div>
                         </div>
